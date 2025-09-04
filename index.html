@@ -2092,6 +2092,44 @@
             50% { box-shadow: 0 0 30px rgba(212, 175, 55, 1); }
             100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); }
         }
+
+        /* Fixes for mobile */
+        @media (max-width: 768px) {
+            .guarantees-section h2, .treatments-list-section h2, .quiz-section h2 {
+                font-size: 24px;
+                padding: 10px 15px;
+                margin: 0 auto;
+                max-width: calc(100% - 20px);
+            }
+
+            .results-grid {
+                display: flex;
+                overflow-x: auto;
+                gap: 15px;
+            }
+
+            .result-item {
+                min-width: 250px;
+                flex-shrink: 0;
+            }
+
+            .how-it-works-timeline {
+                max-width: 100%;
+            }
+
+            .how-it-works-timeline::before {
+                left: 35px;
+            }
+
+            .timeline-step {
+                padding-left: 50px;
+            }
+
+            .step-content {
+                margin-left: 25px;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2331,7 +2369,7 @@
                     <div class="result-item">
                         <img src="5.jpg" alt="Antes y después 8">
                         <div class="result-overlay">
-                            <h3>Contorno Facial</h3>
+                            <h3>Contorno facial</h3>
                             <p>Definición natural del óvalo facial</p>
                         </div>
                     </div>
@@ -2473,17 +2511,17 @@
                     <div class="quiz-question">
                         <h3>¿Cuál es tu principal preocupación?</h3>
                         <div class="quiz-options">
-                            <div class="quiz-option" data-value="arrugas">Arrugas y líneas de expresión</div>
-                            <div class="quiz-option" data-value="volumen">Pérdida de volumen facial</div>
-                            <div class="quiz-option" data-value="rejuvenecimiento">Rejuvenecimiento general</div>
+                            <div class="quiz-option" data-value="arrugas">Arrugas y líneas de expresión<p>Usa toxina botulínica para relajar músculos faciales; FDA aprobado, por médicos certificados. Resultados en 7-14 días, hasta 6 meses. Sin dolor, recuperación inmediata. Mejor que cirugía: sin cicatrices.</p></div>
+                            <div class="quiz-option" data-value="volumen">Pérdida de volumen facial<p>Ácido hialurónico biocompatible estimula colágeno; seguro y efectivo. Resultados visibles en 15 días, dura 12 meses. Adaptado a ti, corrige volúmenes. Mínima molestia, 24h recuperación. Superior a fillers tradicionales: natural.</p></div>
+                            <div class="quiz-option" data-value="rejuvenecimiento">Rejuvenecimiento general<p>Plasma rico en plaquetas regenera células; CE certificado, por especialistas. Mejora en 4 semanas, dura 1 año. Personalizado, elimina manchas. Leve calor, rutina inmediata. Mejor que láser: no invasivo.</p></div>
                         </div>
                     </div>
                     <div class="quiz-question">
                         <h3>¿Qué tipo de resultados prefieres?</h3>
                         <div class="quiz-options">
-                            <div class="quiz-option" data-value="inmediatos">Resultados inmediatos</div>
-                            <div class="quiz-option" data-value="progresivos">Resultados progresivos y naturales</div>
-                            <div class="quiz-option" data-value="duraderos">Resultados duraderos con mantenimiento</div>
+                            <div class="quiz-option" data-value="inmediatos">Resultados inmediatos<p>Toxina botulínica bloquea señales nerviosas; segura por ISO. Visibles en 48h, 4-6 meses. Corrige arrugas profundas. Sin dolor, recuperación rápida. Mejor que cremas: efectivo profundo.</p></div>
+                            <div class="quiz-option" data-value="progresivos">Resultados progresivos y naturales<p>Ácido hialurónico hidrata y estimula; biocompatible, FDA. Firmeza en 15 días, 12 meses. Adaptado, define contorno. Leve pinchazo, 24h rutina. Superior a cirugía: sin riesgos mayores.</p></div>
+                            <div class="quiz-option" data-value="duraderos">Resultados duraderos con mantenimiento<p>Plasma activa factores de crecimiento; efectivo y seguro. Rejuvenecimiento en 1 mes, hasta 18 meses. Personalizado, firmeza general. Mínimo discomfort, inmediata recuperación. Mejor que peelings: regenerativo natural.</p></div>
                         </div>
                     </div>
                     <button class="btn" type="submit">Ver Mi Recomendación</button>
