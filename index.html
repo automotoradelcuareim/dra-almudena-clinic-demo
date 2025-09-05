@@ -960,17 +960,21 @@
         
         @media (max-width: 768px) {
             .how-it-works-timeline::before {
-                left: 35px;
+                left: 25px;
             }
             
             .timeline-step {
                 flex-direction: row !important;
-                padding-left: 50px;
+                padding-left: 40px;
             }
             
             .step-content {
                 margin: 0;
-                margin-left: 25px;
+                margin-left: 15px;
+                padding: 15px;
+                width: calc(100% - 70px);
+                overflow: visible;
+                word-break: break-word;
             }
         }
         
@@ -1775,6 +1779,7 @@
             border-radius: var(--radius);
             cursor: pointer;
             transition: var(--transition);
+            position: relative;
         }
         
         .quiz-option:hover {
@@ -1785,6 +1790,24 @@
         .quiz-option.selected {
             border-color: var(--gold-primary);
             background: var(--gold-light);
+        }
+
+        .quiz-option .option-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .quiz-option .option-title i {
+            cursor: pointer;
+        }
+
+        .quiz-option .option-info {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
         }
         
         #quiz-result {
@@ -2118,16 +2141,19 @@
             }
 
             .how-it-works-timeline::before {
-                left: 35px;
+                left: 25px;
             }
 
             .timeline-step {
-                padding-left: 50px;
+                padding-left: 40px;
             }
 
             .step-content {
-                margin-left: 25px;
-                padding: 20px;
+                margin-left: 15px;
+                padding: 15px;
+                width: calc(100% - 70px);
+                overflow: visible;
+                word-break: break-word;
             }
         }
     </style>
@@ -2360,14 +2386,14 @@
                         </div>
                     </div>
                     <div class="result-item">
-                        <img src="4.jpg" alt="Antes y después 7">
+                        <img src="Hidratación Profunda.jpg" alt="Antes y después 7">
                         <div class="result-overlay">
                             <h3>Hidratación Profunda</h3>
                             <p>Mejora en la textura de la piel</p>
                         </div>
                     </div>
                     <div class="result-item">
-                        <img src="5.jpg" alt="Antes y después 8">
+                        <img src="Contorno facial.jpg" alt="Antes y después 8">
                         <div class="result-overlay">
                             <h3>Contorno facial</h3>
                             <p>Definición natural del óvalo facial</p>
@@ -2511,17 +2537,35 @@
                     <div class="quiz-question">
                         <h3>¿Cuál es tu principal preocupación?</h3>
                         <div class="quiz-options">
-                            <div class="quiz-option" data-value="arrugas">Arrugas y líneas de expresión<p>Usa toxina botulínica para relajar músculos faciales; FDA aprobado, por médicos certificados. Resultados en 7-14 días, hasta 6 meses. Sin dolor, recuperación inmediata. Mejor que cirugía: sin cicatrices.</p></div>
-                            <div class="quiz-option" data-value="volumen">Pérdida de volumen facial<p>Ácido hialurónico biocompatible estimula colágeno; seguro y efectivo. Resultados visibles en 15 días, dura 12 meses. Adaptado a ti, corrige volúmenes. Mínima molestia, 24h recuperación. Superior a fillers tradicionales: natural.</p></div>
-                            <div class="quiz-option" data-value="rejuvenecimiento">Rejuvenecimiento general<p>Plasma rico en plaquetas regenera células; CE certificado, por especialistas. Mejora en 4 semanas, dura 1 año. Personalizado, elimina manchas. Leve calor, rutina inmediata. Mejor que láser: no invasivo.</p></div>
+                            <div class="quiz-option" data-value="arrugas">
+                                <div class="option-title">Arrugas y líneas de expresión <i class="fas fa-chevron-down info-toggle"></i></div>
+                                <div class="option-info"><p>Usa toxina botulínica para relajar músculos faciales; FDA aprobado, por médicos certificados. Resultados en 7-14 días, hasta 6 meses. Sin dolor, recuperación inmediata. Mejor que cirugía: sin cicatrices.</p></div>
+                            </div>
+                            <div class="quiz-option" data-value="volumen">
+                                <div class="option-title">Pérdida de volumen facial <i class="fas fa-chevron-down info-toggle"></i></div>
+                                <div class="option-info"><p>Ácido hialurónico biocompatible estimula colágeno; seguro y efectivo. Resultados visibles en 15 días, dura 12 meses. Adaptado a ti, corrige volúmenes. Mínima molestia, 24h recuperación. Superior a fillers tradicionales: natural.</p></div>
+                            </div>
+                            <div class="quiz-option" data-value="rejuvenecimiento">
+                                <div class="option-title">Rejuvenecimiento general <i class="fas fa-chevron-down info-toggle"></i></div>
+                                <div class="option-info"><p>Plasma rico en plaquetas regenera células; CE certificado, por especialistas. Mejora en 4 semanas, dura 1 año. Personalizado, elimina manchas. Leve calor, rutina inmediata. Mejor que láser: no invasivo.</p></div>
+                            </div>
                         </div>
                     </div>
                     <div class="quiz-question">
                         <h3>¿Qué tipo de resultados prefieres?</h3>
                         <div class="quiz-options">
-                            <div class="quiz-option" data-value="inmediatos">Resultados inmediatos<p>Toxina botulínica bloquea señales nerviosas; segura por ISO. Visibles en 48h, 4-6 meses. Corrige arrugas profundas. Sin dolor, recuperación rápida. Mejor que cremas: efectivo profundo.</p></div>
-                            <div class="quiz-option" data-value="progresivos">Resultados progresivos y naturales<p>Ácido hialurónico hidrata y estimula; biocompatible, FDA. Firmeza en 15 días, 12 meses. Adaptado, define contorno. Leve pinchazo, 24h rutina. Superior a cirugía: sin riesgos mayores.</p></div>
-                            <div class="quiz-option" data-value="duraderos">Resultados duraderos con mantenimiento<p>Plasma activa factores de crecimiento; efectivo y seguro. Rejuvenecimiento en 1 mes, hasta 18 meses. Personalizado, firmeza general. Mínimo discomfort, inmediata recuperación. Mejor que peelings: regenerativo natural.</p></div>
+                            <div class="quiz-option" data-value="inmediatos">
+                                <div class="option-title">Resultados inmediatos <i class="fas fa-chevron-down info-toggle"></i></div>
+                                <div class="option-info"><p>Toxina botulínica bloquea señales nerviosas; segura por ISO. Visibles en 48h, 4-6 meses. Corrige arrugas profundas. Sin dolor, recuperación rápida. Mejor que cremas: efectivo profundo.</p></div>
+                            </div>
+                            <div class="quiz-option" data-value="progresivos">
+                                <div class="option-title">Resultados progresivos y naturales <i class="fas fa-chevron-down info-toggle"></i></div>
+                                <div class="option-info"><p>Ácido hialurónico hidrata y estimula; biocompatible, FDA. Firmeza en 15 días, 12 meses. Adaptado, define contorno. Leve pinchazo, 24h rutina. Superior a cirugía: sin riesgos mayores.</p></div>
+                            </div>
+                            <div class="quiz-option" data-value="duraderos">
+                                <div class="option-title">Resultados duraderos con mantenimiento <i class="fas fa-chevron-down info-toggle"></i></div>
+                                <div class="option-info"><p>Plasma activa factores de crecimiento; efectivo y seguro. Rejuvenecimiento en 1 mes, hasta 18 meses. Personalizado, firmeza general. Mínimo discomfort, inmediata recuperación. Mejor que peelings: regenerativo natural.</p></div>
+                            </div>
                         </div>
                     </div>
                     <button class="btn" type="submit">Ver Mi Recomendación</button>
@@ -2986,13 +3030,25 @@
         if (quizForm) {
             // Selección de opciones
             document.querySelectorAll('.quiz-option').forEach(option => {
-                option.addEventListener('click', function() {
+                option.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('info-toggle')) return;
                     const siblings = this.parentElement.querySelectorAll('.quiz-option');
                     siblings.forEach(sib => sib.classList.remove('selected'));
                     this.classList.add('selected');
                 });
             });
             
+            // Toggle info
+            document.querySelectorAll('.info-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const info = this.parentElement.nextElementSibling;
+                    info.style.display = info.style.display === 'none' || info.style.display === '' ? 'block' : 'none';
+                    this.classList.toggle('fa-chevron-down');
+                    this.classList.toggle('fa-chevron-up');
+                });
+            });
+
             quizForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 const concern = document.querySelector('.quiz-options:nth-child(1) .selected')?.dataset.value;
@@ -3020,13 +3076,20 @@
         }
         
         // Exit Intent Pop-up
-        let mouseLeft = false;
+        let popupShown = false;
         document.addEventListener('mouseleave', function(e) {
-            if (e.clientY < 0 && !mouseLeft) {
+            if (e.clientY < 0 && !popupShown) {
                 document.getElementById('exitPopup').style.display = 'block';
-                mouseLeft = true;
+                popupShown = true;
             }
         });
+        
+        setTimeout(() => {
+            if (!popupShown) {
+                document.getElementById('exitPopup').style.display = 'block';
+                popupShown = true;
+            }
+        }, 60000); // 60 segundos
         
         function closeExitPopup() {
             document.getElementById('exitPopup').style.display = 'none';
